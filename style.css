@@ -1,0 +1,518 @@
+:root {
+    --pink: #e84393;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border- box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #fff;
+    font-size:xx-large;
+    outline: #e84393;
+    border: none;
+    text-decoration:wavy;
+    text-transform: capitalize;
+    transition: 2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+
+.kawaii-heading {
+    font-size: 4.3rem;
+    font-weight: 900;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+
+    /* Softer pastel cotton-candy gradient */
+    background: linear-gradient(120deg, #ffb6e9, #ffc9f1, #c6e9ff, #d6c4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Softer dreamy glow */
+    text-shadow:
+        0 0 6px rgba(255, 200, 240, 0.6),
+        0 0 12px rgba(210, 220, 255, 0.4);
+
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+
+    /* Gentle bounce */
+    animation: kawaiiFloat 3s ease-in-out infinite;
+}
+
+@keyframes kawaiiFloat {
+    0%   { transform: translateY(0) scale(1); }
+    50%  { transform: translateY(-8px) scale(1.02); }
+    100% { transform: translateY(0) scale(1); }
+}
+
+/*---------------- all product ----------------*/
+
+.row-2{
+    justify-content: space-between;
+margin: 100px auto 50px;
+}
+
+
+
+
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #86bbda;
+    color: #fff;
+    padding: 1rem 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.btn:hover {
+    background: var(--pink);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo img {
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Navigation */
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 20px;
+  transition: .2s ease;
+}
+
+.nav-list a:hover {
+  color: #ee77c6;
+}
+
+/* Right side icons */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-icon img,
+.header-cart img {
+  width: 30px;
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+
+.header-icon img:hover,
+.header-cart img:hover {
+  transform: scale(1.1);
+}
+
+/* Cart count */
+.header-cart {
+  position: relative;
+}
+
+.cart-count {
+  background: #ff5f8a;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 50%;
+  padding: 2px 6px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+}
+
+.home {
+    position: relative;
+    min-height: 100vh;
+    background: url(https://prod-server-r2.popmart.com/cdn-cgi/image/width=1920%2Cformat=webp/https://prod-server-r2.popmart.com/uploads/q3lytVaHV7w5I1PX6OTTBPIzYuVo72VC/RDsu9ccHORb5mKo9-1763027442-pc.jpg) center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; 
+    text-align: center;
+    padding-bottom: 80px; 
+}
+
+.home .content {
+    color: rgb(255, 255, 255);
+}
+
+
+.small-container {
+    max-width: 1080px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-4 {
+    flex: 0 0 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5;
+}
+
+.col-4 img {
+    width: 100%;
+}
+
+.col-4 p {
+    display: block;
+    color: black;
+    font-size: 16px;
+}
+.col-4 h4 {
+    display: block;
+    color: #000;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px;
+    justify-content: center;
+}
+.product-card {
+    width: 240px;
+    text-align: center;
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+.product-card h4 {
+    display: block;
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0 5px;
+}
+.product-card .description {
+    font-size: 12px;
+    color: #666;
+    margin: 6px 0 10px;
+    min-height: 40px;
+}
+.product-card .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+/* Popup Modal Background */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 9999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+/* Modal Image */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(255,255,255,0.3);
+    animation: zoomIn 0.3s ease;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Animation */
+@keyframes zoomIn {
+    from { transform: scale(0.6); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+/* Section Title */
+.testimonial-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Slider Area */
+.slider-container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Character List */
+.testimonial-list {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Character Card */
+.testimonial {
+    background: #ffffff;
+    width: 180px;
+    padding: 20px 10px;
+    border-radius: 18px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Hover Animation */
+.testimonial:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Character Images */
+.testimonial img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Image Hover (POP MART style) */
+.testimonial:hover img {
+    transform: scale(1.08);
+}
+
+/* Character Name */
+.name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 10px;
+    color: #333;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .testimonial-list {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    .testimonial {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial {
+        width: 90%;
+    }
+}
+
+.meet-title img {
+  width: 300px;
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.swiper {
+  width: 90%;
+  padding-bottom: 40px;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.char-img {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  transition: transform .3s ease;
+}
+
+.char-img:hover {
+  transform: scale(1.08);
+}
+.char-name {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #3f3d3e;
+    margin-top: 8px;
+}
+.testimonials {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 50px 20px;
+    flex-wrap: wrap;
+    
+}
+
+.testimonial-card {
+    background: #fff;
+    width: 240px;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: .3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 12px 40px rgba(0,0,0,0.12);
+}
+
+.quote-icon {
+    font-size: 36px;
+    color: #ff6437;
+    margin-bottom: 15px;
+}
+
+.testimonial-card p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.rating i {
+    color: #ff6437;
+    margin: 0 2px;
+    font-size: 16px;
+}
+
+.profile {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 15px auto 10px;
+    display: block;
+}
+
+.testimonial-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+
+
+
+
+.footer {
+    background: #f8f8f8;
+    padding: 30px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border-top: 2px solid #eee;
+}
+
+.footer-title {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-icons img {
+    width: 35px;
+    margin: 0 8px;
+    transition: 0.3s;
+}
+
+.footer-icons img:hover {
+    transform: scale(1.1);
+}
+
+.footer-contact h3 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+}
+
+
+
